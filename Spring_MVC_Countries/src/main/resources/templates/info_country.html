@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Country Info</title>
+<link th:href="@{/style/style.css}" rel="stylesheet" />
+</head>
+<body>
+	<div align="center">
+			<h1>Countries</h1>
+			<br/>
+			<form action="#" th:object="${country}">
+				<label for="id">Id</label>
+				<input type="text" name="id" th:field="*{id}" disabled="disabled"/>
+			
+				<label for="code">Code</label>
+				<input type="text" name="code" th:field="*{code}" disabled="disabled"/>
+				
+				<label for="name">Name</label>
+				<input type="text" name="name" th:field="*{name}" disabled="disabled"/>
+				
+				<label for="capital">Capital</label>
+				<input type="text" name="capital" th:field="*{capital}" disabled="disabled"/>
+				
+				<label for="continent">Continent</label>
+				<input type="text" name="continent" th:field="*{continent}" disabled="disabled"/>
+				
+				<label for="population">Population</label>
+				<input style="margin-bottom:20px;" type="number" name="population" th:field="*{population}" disabled="disabled"/>
+				<a class="cancel" th:href="@{/}">Return</a>
+			</form>	
+	</div>
+</body>
+</html>
